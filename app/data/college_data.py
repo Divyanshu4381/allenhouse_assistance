@@ -24,4 +24,79 @@ COLLEGE_DATA = [
 "content": "Established in 2009 under the Superhouse Education Foundation, the institute is approved by AICTE and affiliated with AKTU (code: 505). Admissions are open for B.Tech programs via enquiry, with focus on core technical skills and industry-relevant training. It has portals for students, faculty, alumni, grievances, and payments. Led by Chairman Mr. Mukhtarul Amin, it emphasizes innovation, leadership, and success. The group is known for its commitment to meeting educational challenges and preparing students for careers in engineering, technology, and business."
 },
 
+    {
+        "source": "leadership_director",
+        "content": {
+            "Type": "Leadership",
+            "Name": "Dr. Sameer Srivastava",
+            "Role": "Director",
+            "Department": "Institute Administration",
+            "Experience": "22 Years",
+            "Specialization": "Strategic Management",
+            "Email": "director@allenhouse.ac.in",
+            "Office": "Director's Office, Admin Block"
+        }
+    },
+    {
+        "source": "leadership_dean",
+        "content": {
+            "Type": "Leadership",
+            "Name": "Dr. Meenakshi Singh",
+            "Role": "Dean of Academics",
+            "Department": "Academic Council",
+            "Experience": "18 Years",
+            "Specialization": "Curriculum Development",
+            "Email": "dean.academics@allenhouse.ac.in",
+            "Office": "Room 101, Academic Block"
+        }
+    },
+    {
+        "source": "faculty_hod_cse",
+        "content": {
+            "Type": "Faculty",
+            "Name": "Dr. Anil Kumar",
+            "Role": "Head of Department (HOD)",
+            "Department": "Computer Science and Engineering (CSE)",
+            "Experience": "15 Years",
+            "Specialization": "Artificial Intelligence and Machine Learning",
+            "Email": "hod.cse@allenhouse.ac.in",
+            "Office": "Room 204, Tech Block"
+        }
+    },
+    {
+        "source": "faculty_hod_me",
+        "content": {
+            "Type": "Faculty",
+            "Name": "Prof. Rajesh Tiwari",
+            "Role": "Head of Department (HOD)",
+            "Department": "Mechanical Engineering (ME)",
+            "Experience": "12 Years",
+            "Specialization": "Thermodynamics",
+            "Email": "hod.me@allenhouse.ac.in",
+            "Office": "Room 108, Mechanical Wing"
+        }
+    },
+    {
+        "source": "staff_chief_librarian",
+        "content": {
+            "Type": "Administrative Staff",
+            "Name": "Mrs. Kavita Verma",
+            "Role": "Chief Librarian",
+            "Department": "Central Library",
+            "Experience": "10 Years",
+            "Email": "library@allenhouse.ac.in",
+            "Office Timing": "8:30 AM to 5:00 PM"
+        }
+    },
+    {
+        "source": "staff_admission_counselor",
+        "content": {
+            "Type": "Administrative Staff",
+            "Name": "Mr. Rakesh Sharma",
+            "Role": "Chief Admission Counselor",
+            "Department": "Admissions Cell",
+            "Contact Number": "+91-9876543210",
+            "Office Timing": "9:00 AM to 4:00 PM"
+        }
+    }
 ]

@@ -49,6 +49,12 @@ SYNONYMS = {
 }
 
 
+STOP_WORDS = {
+    "is", "the", "a", "an", "of", "and", "in", "to", "for", "with", "on", "at", "by", "from",
+    "who", "what", "where", "when", "why", "how", "are", "am", "it", "this", "that", "these", 
+    "those", "tell", "me", "about", "can", "you", "give", "details", "please", "know", "want"
+}
+
 def normalize(text: str) -> str:
     text = text.lower()
     text = re.sub(r"[^a-z0-9\s]", " ", text)
@@ -61,4 +67,8 @@ def normalize(text: str) -> str:
                 text = re.sub(pattern, key, text)
                 break   # avoid over-replacing
 
-    return text
+    # Remove stop words
+    words = text.split()
+    filtered_words = [w for w in words if w not in STOP_WORDS]
+    
+    return " ".join(filtered_words)

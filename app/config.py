@@ -1,6 +1,6 @@
 import os
 
-API_KEY = os.getenv("NVIDIA_API_KEY")
+API_KEY = os.getenv("API_KEY")
 
 API_URL = "https://integrate.api.nvidia.com/v1/chat/completions"
 MODEL_NAME = "meta/llama-3.1-8b-instruct"
