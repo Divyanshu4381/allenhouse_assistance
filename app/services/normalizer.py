@@ -45,6 +45,10 @@ SYNONYMS = {
     "admission": [  # Useful for related searches
         "admission", "admissions", "admission process", "admission open", "admission enquiry", "cutoff",
         "eligibility", "entrance exam", "aktu admission", "btech admission", "direct admission"
+    ],
+    "courses": [  # For programs and branches
+        "course", "courses", "programs", "branches", "streams", "specializations", "degree", 
+        "academic programs", "curriculum", "btech courses", "mca courses", "mba courses"
     ]
 }
 

@@ -1,7 +1,7 @@
 COLLEGE_DATA = [
 {
 "source": "courses",
-"content": "Allenhouse Institute of Technology offers undergraduate B.Tech programs in Computer Science and Engineering (CSE), Computer Science and Engineering (Artificial Intelligence and Machine Learning - AI & ML), Electronics and Communication Engineering (EC), Mechanical Engineering (ME), and Civil Engineering. The programs are 4 years in duration and affiliated with Dr. A.P.J. Abdul Kalam Technical University (AKTU), Lucknow. The institute is part of the Allenhouse Group, which also offers MCA, MBA, BBA, and BCA programs across its institutions, but the Technology institute focuses primarily on engineering disciplines."
+"content": "Allenhouse Institute of Technology offers various undergraduate B.Tech courses and programs in Computer Science and Engineering (CSE), Computer Science and Engineering (Artificial Intelligence and Machine Learning - AI & ML), Electronics and Communication Engineering (EC), Mechanical Engineering (ME), and Civil Engineering. The programs are 4 years in duration and affiliated with Dr. A.P.J. Abdul Kalam Technical University (AKTU), Lucknow. The institute is part of the Allenhouse Group, which also offers MCA, MBA, BBA, and BCA programs across its institutions, but the Technology institute focuses primarily on engineering disciplines."
 },
 {
 "source": "fees",
