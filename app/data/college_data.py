@@ -5,7 +5,7 @@ COLLEGE_DATA = [
 },
 {
 "source": "fees",
-"content": "The fee structure for B.Tech programs ranges from ₹75,000 to ₹83,000 per year, with total program costs approximately ₹2.45 lakhs to ₹3.92 lakhs depending on the specialization. Additional charges include training and placement fee of ₹10,000 annually, examination fees of around ₹8,000, book bank fee of ₹2,000, and admission registration fee of ₹1,000 to ₹2,000. Transport services cost an extra ₹20,000 to ₹25,000 per year. Scholarships are available through the Uttar Pradesh government for eligible students. For other programs in the group: MCA is ₹1.5 lakhs total, MBA/PGDM is ₹1.6 lakhs total."
+"content": "Fee structure for session 2026-27 (Academic fee in Rs. without registration and exam fee): BBA: First Year ₹55,000, II & III Year ₹58,000. BCA: First Year ₹55,000, II & III Year ₹58,000. B.Tech (CSE) & B.Tech (AI&ML): First Year ₹1,05,000, II, III & IV Year ₹1,05,000. B.Tech (ME) & B.Tech (ECE): First Year ₹70,000, II, III & IV Year ₹70,000. MBA: First Year ₹90,000, II Year ₹90,000. MCA: First Year ₹80,000, II Year ₹80,000. University registration fee and exam fee shall be applicable as per university norms. Hostel: Non AC ₹82,000/Year, AC ₹1.10L/Year. Bus: ₹38,000/Year (Kanpur to Shuklaganj), ₹42,000/Year (Unnao & Fatehpur). For more details, contact Allenhouse Group of Institutions at 8127405222 or 8127505222."
 },
 {
 "source": "environment",
@@ -17,11 +17,19 @@ COLLEGE_DATA = [
 },
 {
 "source": "placements",
-"content": "The institute boasts a strong placement record with a 85-90% placement rate. The highest package offered is up to ₹22 LPA (recent), while previous records show ₹14 LPA to ₹18 LPA, with average packages ranging from ₹4 LPA to ₹6 LPA. Top recruiters include TCS, Wipro, Infosys, HCL, Capgemini, Amazon, Tommy Hilfiger, Bajaj, Mahindra Group, SLMG Beverages, Orient Cable, VVDN Technologies, and others. The Training and Placement team organizes events like HR Symposiums, corporate sessions, and has partnerships such as with HCLTech for career opportunities. Placements emphasize student readiness, proactive attitudes, and bridging academics with industry."
+"content": "Allenhouse Group of Institutions maintains a consistent 90%+ placement rate. The 2024 batch secured over 470 placement offers. The highest package achieved is 18 LPA, with an average package of 4-6 LPA. Top recruiters include TCS, Infosys, Wipro, Capgemini, HCL, Cognizant, Tech Mahindra, HDFC Bank, Reliance Jio, L&T, Jaro Education, Tommy Hilfiger, Kansai Nerolac, ITC, Extramarks Education, Infoedge, and Jubilant Foods. Students are placed across Software, IT, Consulting, Finance, Manufacturing, Digital Marketing, Retail, FMCG, and Fashion sectors. The Training and Placement Cell provides comprehensive preparation: mock interviews, group discussions, and technical training (Java, DSA, DBMS, Python, MatLab, AutoCAD, Solidworks, Revit). It also prepares students for GATE, GRE, and CAT. The institution also supports startups and entrepreneurs via its Entrepreneurship Cell."
 },
 {
 "source": "other",
 "content": "Established in 2009 under the Superhouse Education Foundation, the institute is approved by AICTE and affiliated with AKTU (code: 505). Admissions are open for B.Tech programs via enquiry, with focus on core technical skills and industry-relevant training. It has portals for students, faculty, alumni, grievances, and payments. Led by Chairman Mr. Mukhtarul Amin, it emphasizes innovation, leadership, and success. The group is known for its commitment to meeting educational challenges and preparing students for careers in engineering, technology, and business."
+},
+{
+"source": "events_activities",
+"content": "Allenhouse Group of Institutions organizes various events and activities. Hackathon 2.0 (Mar 17-18, 2026) featured 57 teams working on 'Digital Blood Donation Network', with Cipher Syndicate (AIT) winning. EXUBERANCE 2026 (Feb 7-10, 2026) was a grand Techno-Management, Cultural & Sports Fiesta with 22 events, ending with a DJ night by Trippin Jammers. 'Budget Pe Charcha 2026' (Feb 1, 2026) was an expert panel at Allenhouse Institute of Management analyzing the Union Budget. ICHIS 2026 (Jan 30-31, 2026) was an International Conference on Human Capital, Innovation & Sustainability discussing AI and education. A session on 'Ethics & Governance' by Shri Harikripa Das Ji (ISKCON) was held on Oct 31, 2025. For more details, view https://allenhouse.ac.in/events-activities/"
+},
+{
+"source": "scholarships",
+"content": "Allenhouse Group of Institutions supports students through various financial aid programs and scholarships. Eligible students can avail of the UP Scholarship provided by the Government of Uttar Pradesh, as well as apply through the National Scholarship Portal (NSP) for other national-level scholarships."
 },
 
     {
@@ -97,6 +105,24 @@ COLLEGE_DATA = [
             "Department": "Admissions Cell",
             "Contact Number": "+91-9876543210",
             "Office Timing": "9:00 AM to 4:00 PM"
+        }
+    },
+    {
+        "source": "staff_placement_manager_lalit",
+        "content": {
+            "Type": "Placement Team",
+            "Name": "Mr. Lalit Kumar",
+            "Role": "Sr. Manager Corporate Relations",
+            "Department": "Training and Placement Cell"
+        }
+    },
+    {
+        "source": "staff_placement_manager_ruchi",
+        "content": {
+            "Type": "Placement Team",
+            "Name": "Ms. Ruchi Tiwari",
+            "Role": "Manager Corporate Relations",
+            "Department": "Training and Placement Cell"
         }
     }
 ]
