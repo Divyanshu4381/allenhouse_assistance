@@ -164,12 +164,62 @@ http://127.0.0.1:8001/docs
 
 ---
 
-## 🚀 Future Improvements
-- Admin panel to update college data
-- Persistent FAISS index
-- Hindi / Hinglish query support
-- Analytics for frequently asked questions
-- Linux / VPS deployment
+## 🚀 Deployment & Server Setup
+
+If you are deploying this project to a Linux VPS (e.g., DigitalOcean, AWS, Render), follow these optimized steps to ensure stability and efficiency.
+
+### 🥇 Option 1: CPU-only Install (RECOMMENDED)
+Since most cloud servers (without GPUs) don't need heavy CUDA drivers, use this method to save disk space and RAM.
+
+1. **Clean start:**
+   ```bash
+   rm -rf venv
+   python3 -m venv venv
+   source venv/bin/activate
+   ```
+2. **Install PyTorch (CPU version):**
+   ```bash
+   pip install torch --index-url https://download.pytorch.org/whl/cpu
+   ```
+3. **Install other dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+### 🥈 Option 2: Space Optimization
+If your server is running out of disk space, run these cleanup commands:
+```bash
+sudo apt clean
+rm -rf ~/.cache/pip
+rm -rf /tmp/*
+```
+*Expected: Frees up ~1GB+ of space.*
+
+### 🥉 Option 3: Server Specifications
+For a smooth production experience with FAISS and LLM models:
+- **Disk Space:** 15–20GB minimum.
+- **RAM:** 2GB minimum (4GB recommended).
 
 ---
 
+## 🛠️ Running 24/7 with `tmux`
+To keep the bot running even after you close your terminal session:
+
+1. **Start a new session:**
+   ```bash
+   tmux new -s allen-bot
+   ```
+2. **Run the server:**
+   ```bash
+   uvicorn app.main:app --host 0.0.0.0 --port 8001
+   ```
+3. **Detach (Leave it running):**
+   Press `Ctrl + B`, then let go and press `D`.
+4. **Reconnect later:**
+   ```bash
+   tmux attach -t allen-bot
+   ```
+
+---
+
+*Powered by ⚡ Rizq Technologies*
