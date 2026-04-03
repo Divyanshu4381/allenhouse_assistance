@@ -27,6 +27,8 @@ def ask_llm(context: str, question: str) -> str:
             "ANSWER FORMAT RULES:\n"
             "- If the question is about the institute, programs, or overview:\n"
             "  Respond in clearly separated paragraphs.\n"
+            "- If the query involves multiple data points (like Fees, Course Lists, or Placement packages):\n"
+            "  ALWAYS use Markdown Tables to organize the data for readability.\n"
             "- If the question is about students, training, or placements:\n"
             "  Explain in full sentences with clarity.\n"
             "- Do not write unnecessary introductions or conclusions.\n\n"

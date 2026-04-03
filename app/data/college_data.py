@@ -1,11 +1,11 @@
 COLLEGE_DATA = [
 {
 "source": "courses",
-"content": "Allenhouse Institute of Technology offers various undergraduate B.Tech courses and programs in Computer Science and Engineering (CSE), Computer Science and Engineering (Artificial Intelligence and Machine Learning - AI & ML), Electronics and Communication Engineering (EC), Mechanical Engineering (ME), and Civil Engineering. The programs are 4 years in duration and affiliated with Dr. A.P.J. Abdul Kalam Technical University (AKTU), Lucknow. The institute is part of the Allenhouse Group, which also offers MCA, MBA, BBA, and BCA programs across its institutions, but the Technology institute focuses primarily on engineering disciplines."
+"content": "Allenhouse Institute of Technology offers various undergraduate B.Tech courses and programs:\n- B.Tech in Computer Science and Engineering (CSE)\n- B.Tech in CSE (Artificial Intelligence and Machine Learning - AI & ML)\n- B.Tech in Electronics and Communication Engineering (EC)\n- B.Tech in Mechanical Engineering (ME)\n- B.Tech in Civil Engineering\nDuration: 4 Years. Affiliation: Dr. A.P.J. Abdul Kalam Technical University (AKTU), Lucknow.\nOther courses in Allenhouse Group: MCA, MBA, BBA, and BCA."
 },
 {
 "source": "fees",
-"content": "Fee structure for session 2026-27 (Academic fee in Rs. without registration and exam fee): BBA: First Year ₹55,000, II & III Year ₹58,000. BCA: First Year ₹55,000, II & III Year ₹58,000. B.Tech (CSE) & B.Tech (AI&ML): First Year ₹1,05,000, II, III & IV Year ₹1,05,000. B.Tech (ME) & B.Tech (ECE): First Year ₹70,000, II, III & IV Year ₹70,000. MBA: First Year ₹90,000, II Year ₹90,000. MCA: First Year ₹80,000, II Year ₹80,000. University registration fee and exam fee shall be applicable as per university norms. Hostel: Non AC ₹82,000/Year, AC ₹1.10L/Year. Bus: ₹38,000/Year (Kanpur to Shuklaganj), ₹42,000/Year (Unnao & Fatehpur). For more details, contact Allenhouse Group of Institutions at 8127405222 or 8127505222."
+"content": "Fee structure for session 2026-27 (Academic fee in Rs. without registration and exams):\n- BBA Admissions Fee: First Year ₹55,000, II & III Year ₹58,000.\n- BCA Admissions Fee: First Year ₹55,000, II & III Year ₹58,000.\n- B.Tech (CSE) & B.Tech (AI&ML) Admissions Fee: First Year ₹1,05,000, II, III & IV Year ₹1,05,000.\n- B.Tech (ME) & B.Tech (ECE) Admissions Fee: First Year ₹70,000, II, III & IV Year ₹70,000.\n- MBA Admissions Fee: First Year ₹90,000, II Year ₹90,000.\n- MCA Admissions Fee: First Year ₹80,000, II Year ₹80,000.\nNote: University registration and exam fees are extra. \nHostel Fees: Non AC ₹82,000/Year, AC ₹1,10,000/Year.\nTransport/Bus Fees: ₹38,000/Year (Kanpur to Shuklaganj), ₹42,000/Year (Unnao & Fatehpur).\nFor more details, contact Allenhouse Group at 8127405222, 8127505222."
 },
 {
 "source": "environment",
@@ -17,7 +17,7 @@ COLLEGE_DATA = [
 },
 {
 "source": "placements",
-"content": "Allenhouse Group of Institutions maintains a consistent 90%+ placement rate. The 2024 batch secured over 470 placement offers. The highest package achieved is 18 LPA, with an average package of 4-6 LPA. Top recruiters include TCS, Infosys, Wipro, Capgemini, HCL, Cognizant, Tech Mahindra, HDFC Bank, Reliance Jio, L&T, Jaro Education, Tommy Hilfiger, Kansai Nerolac, ITC, Extramarks Education, Infoedge, and Jubilant Foods. Students are placed across Software, IT, Consulting, Finance, Manufacturing, Digital Marketing, Retail, FMCG, and Fashion sectors. The Training and Placement Cell provides comprehensive preparation: mock interviews, group discussions, and technical training (Java, DSA, DBMS, Python, MatLab, AutoCAD, Solidworks, Revit). It also prepares students for GATE, GRE, and CAT. The institution also supports startups and entrepreneurs via its Entrepreneurship Cell."
+"content": "Allenhouse Group Placements Highlights:\n- Placement Rate: 90%+\n- 2024 Batch Offers: 470+\n- Highest Package: 18 LPA\n- Average Package: 4-6 LPA\nTop Recruiters: TCS, Infosys, Wipro, Capgemini, HCL, Cognizant, Tech Mahindra, HDFC Bank, Reliance Jio, L&T, Jaro Education, Tommy Hilfiger, Kansai Nerolac, ITC, Extramarks Education, Infoedge, Jubilant Foods.\nSectors: Software, IT, Consulting, Finance, Manufacturing, Digital Marketing, Retail, FMCG, Fashion.\nTraining: Mock interviews, GD, Java, DSA, DBMS, Python, MatLab, AutoCAD, Solidworks, Revit, GATE/GRE/CAT prep."
 },
 {
 "source": "other",
