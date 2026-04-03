@@ -5,3 +5,7 @@ python-dotenv
 sentence-transformers
 faiss-cpu
 numpy
+pytest
+httpx
+black
+pytest-asyncio

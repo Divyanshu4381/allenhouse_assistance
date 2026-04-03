@@ -1,0 +1,48 @@
+name: Allenhouse AI CI/CD
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Python 3.11
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.11"
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install black pytest httpx pytest-asyncio
+        pip install -r requirements.txt
+        
+    - name: Lint with Black
+      run: black --check .
+      
+    - name: Run Tests with Pytest
+      env:
+        API_KEY: ${{ secrets.API_KEY }}
+        VOICE_API_KEY: ${{ secrets.VOICE_API_KEY }}
+      run: pytest
+
+  deploy-to-aws:
+    needs: build-and-test
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    steps:
+    - name: Deploy to AWS EC2 via SSH
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.AWS_HOST }}
+        username: ${{ secrets.AWS_USERNAME }}
+        key: ${{ secrets.AWS_SSH_KEY }}
+        script: |
+          cd ~/allenhouse_assistance
+          bash scripts/deploy.sh
