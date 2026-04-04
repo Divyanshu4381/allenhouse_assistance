@@ -12,54 +12,35 @@ def ask_llm(context: str, question: str) -> str:
             "content": (
                 "You are an official college information assistant.\n\n"
                 "STRICT RULES:\n"
-                "1. Use ONLY the information provided in the Context.\n"
-                "2. Do NOT add assumptions, opinions, or external facts.\n"
-                "3. If the Context does not contain the answer, say exactly:\n"
-                "   'Please contact the college office for this information.'\n"
-                "4. Never leave a sentence incomplete.\n"
-                "5. Do not cut off answers mid-paragraph.\n"
-                "6. Ensure the answer is complete and readable for students and parents.\n\n"
-                "ANSWER FORMAT RULES:\n"
-                "- If the question is about the institute, programs, or overview:\n"
-                "  Respond in clearly separated paragraphs.\n"
-                "- If the query involves multiple data points (like Fees, Course Lists, or Placement packages):\n"
-                "  ALWAYS use Markdown Tables to organize the data for readability.\n"
-                "- If the question is about students, training, or placements:\n"
-                "  Explain in full sentences with clarity.\n"
-                "- Do not write unnecessary introductions or conclusions.\n\n"
-                "LANGUAGE RULES:\n"
-                "- Use simple, clear English.\n"
-                "- Avoid marketing language and exaggeration.\n"
-                "- Maintain a neutral, factual, and professional tone.\n"
+                "1. Be BRIEF, CONCISE, and DIRECT. Answer only what is asked.\n"
+                "2. Use ONLY the information provided in the Context.\n"
+                "3. Do NOT add assumptions or introductions (ex: 'Based on the context...', 'I hope this helps').\n"
+                "4. If the Context does not contain the answer, say exactly:\n"
+                "   'Please contact the college office for this information.'\n\n"
+                "FORMATTING RULES:\n"
+                "- **Clickable Links**: You MUST include any official URLs found in the Context as clickable Markdown links (e.g., [Click Here](URL)).\n"
+                "- **Bold Important Terms**: Use **Bold** for major headings, key amounts (Rs.), and titles.\n"
+                "- **Markdown Tables**: ALWAYS use Markdown Tables for any comparative data. You MUST use the exact Year labels found in the Context (e.g., 'First Year', 'II, III & IV Year', 'II Year').\n"
+                "- **Bullet Points**: Use simple, indented bullet points for short lists.\n"
+                "- **Paragraphs**: Keep plain text to 1-2 short, readable paragraphs.\n"
+                "- **Spacing**: Add a double newline between distinct sections.\n"
             ),
         },
         {
             "role": "user",
-            "content": (f"Context:\n{context}\n\n" f"Question:\n{question}"),
+            "content": f"Context:\n{context}\n\nQuestion:\n{question}",
         },
     ]
 
-    full_answer = ""
+    payload = {
+        "model": MODEL_NAME,
+        "messages": messages,
+        "max_tokens": get_max_tokens(question),
+        "temperature": 0.2,  # Low temp for factual/direct answers
+    }
 
-    for _ in range(3):  # max 3 continuations (safety)
-        payload = {
-            "model": MODEL_NAME,
-            "messages": messages,
-            "max_tokens": get_max_tokens(question),
-        }
+    response = requests.post(API_URL, headers=headers, json=payload)
+    response.raise_for_status()
 
-        response = requests.post(API_URL, headers=headers, json=payload)
-        response.raise_for_status()
-
-        answer_part = response.json()["choices"][0]["message"]["content"]
-        full_answer += " " + answer_part.strip()
-
-        # If answer looks complete, stop
-        if full_answer.strip().endswith((".", "!", "?")):
-            break
-
-        # Ask model to continue
-        messages.append({"role": "assistant", "content": answer_part})
-        messages.append({"role": "user", "content": "Please continue."})
-
-    return full_answer.strip()
+    answer = response.json()["choices"][0]["message"]["content"]
+    return answer.strip()

@@ -361,6 +361,7 @@
       transform: scale(1.02);
     }
 
+
     /* Responsive */
     @media (max-width: 490px) {
       .chatbot {
@@ -421,6 +422,7 @@
       <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
     </button>
   </div>
+
   <div class="chat-footer">
     <span>Powered by</span>
     <a href="https://rizq-technologies.vercel.app" target="_blank" class="rizq-brand">
@@ -461,7 +463,7 @@
     const messageElement = incomingChatLi.querySelector("p");
 
     try {
-      const res = await fetch("http://13.50.19.5:8001/api/ask", {
+      const res = await fetch("/api/ask", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ question: userMessage })
@@ -511,6 +513,6 @@
 
   sendChatBtn.addEventListener("click", handleChat);
 </script>
-<!-- <script src="speech-agent.js"></script> -->
+<script src="voice-agent-plugin.js"></script>
 </body>
 </html>

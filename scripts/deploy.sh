@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Configuration
-APP_NAME="allenhouse-bot"
+APP_NAME="allenhouse"
 PORT=8001
-IMAGE_NAME="allenhouse-image"
+SESSION_NAME="allen-bot"
 
-echo "🚀 Starting deployment to AWS..."
+echo "🚀 Starting deployment to AWS (tmux)..."
 
 # Move to the project directory
 cd ~/allenhouse_assistance
@@ -14,23 +14,26 @@ cd ~/allenhouse_assistance
 echo "📥 Pulling latest code..."
 git pull origin main
 
-# Build the Docker image
-echo "🏗️ Building Docker image..."
-docker build -t $IMAGE_NAME .
+# Activate virtual environment (ensure it exists)
+if [ ! -d "venv" ]; then
+    echo "🏗️ Creating virtual environment..."
+    python3 -m venv venv
+fi
+source venv/bin/activate
 
-# Stop and remove the existing container if it exists
-echo "🛑 Stopping current container..."
-docker stop $APP_NAME || true
-docker rm $APP_NAME || true
+# Install dependencies
+echo "📦 Updating dependencies..."
+pip install -r requirements.txt
 
-# Run the new container
-# Assuming .env file is already present on the server
-echo "🏃 Running new container..."
-docker run -d \
-  --name $APP_NAME \
-  -p $PORT:7860 \
-  --env-file .env \
-  --restart always \
-  $IMAGE_NAME
+# Handle tmux session
+echo "🔄 Restarting application in tmux session: $SESSION_NAME..."
 
-echo "✅ Deployment successful! Bot is running at port $PORT"
+# Kill existing session if it exists
+tmux kill-session -t $SESSION_NAME 2>/dev/null
+
+# Start a new detached tmux session
+# We use -d to start it in the background
+tmux new-session -d -s $SESSION_NAME "source venv/bin/activate && python -m uvicorn app.main:app --host 0.0.0.0 --port $PORT"
+
+echo "✅ Deployment successful! Bot is running in tmux session '$SESSION_NAME' at port $PORT"
+echo "👉 To view logs, run: tmux attach -t $SESSION_NAME"

@@ -5,14 +5,36 @@ COLLEGE_DATA = [
     },
     {
         "source": "fees",
-        "content": "Fee structure for session 2026-27 (Academic fee in Rs. without registration and exams):\n- BBA Admissions Fee: First Year ₹55,000, II & III Year ₹58,000.\n- BCA Admissions Fee: First Year ₹55,000, II & III Year ₹58,000.\n- B.Tech (CSE) & B.Tech (AI&ML) Admissions Fee: First Year ₹1,05,000, II, III & IV Year ₹1,05,000.\n- B.Tech (ME) & B.Tech (ECE) Admissions Fee: First Year ₹70,000, II, III & IV Year ₹70,000.\n- MBA Admissions Fee: First Year ₹90,000, II Year ₹90,000.\n- MCA Admissions Fee: First Year ₹80,000, II Year ₹80,000.\nNote: University registration and exam fees are extra. \nHostel Fees: Non AC ₹82,000/Year, AC ₹1,10,000/Year.\nTransport/Bus Fees: ₹38,000/Year (Kanpur to Shuklaganj), ₹42,000/Year (Unnao & Fatehpur).\nFor more details, contact Allenhouse Group at 8127405222, 8127505222.",
+        "content": (
+            "Fee for session 2026-27 (Academic fee in Rs. without registration and exam fee):\n"
+            "| Programme | Year | Academic Fee |\n"
+            "|---|---|---|\n"
+            "| BBA | First Year | 55000 |\n"
+            "| BBA | II, III Year | 58000 |\n"
+            "| BCA | First Year | 55000 |\n"
+            "| BCA | II, III Year | 58000 |\n"
+            "| B.Tech. (CSE) | First Year | 105000 |\n"
+            "| B.Tech. (CSE) | II, III & IV Year | 105000 |\n"
+            "| B.Tech. (AI&ML) | First Year | 105000 |\n"
+            "| B.Tech. (AI&ML) | II, III & IV Year | 105000 |\n"
+            "| B.Tech. (ME) | First Year | 70000 |\n"
+            "| B.Tech. (ME) | II, III & IV Year | 70000 |\n"
+            "| B.Tech. (ECE) | First Year | 70000 |\n"
+            "| B.Tech. (ECE) | II, III & IV Year | 70000 |\n"
+            "| MBA | First Year | 90000 |\n"
+            "| MBA | II Year | 90000 |\n"
+            "| MCA | First Year | 80000 |\n"
+            "| MCA | II Year | 80000 |\n\n"
+            "Hostel Fees: Non AC 82000/Year, AC 1.10 L/Year.\n"
+            "Bus Fees: Kanpur to Shuklaganj 38000/Year, Unnao & Fatehpur 42000/Year.\n"
+            "For more details, contact Allenhouse Group at 8127405222, 8127505222."
+        ),
     },
     {
         "source": "environment",
         "content": "The campus is located in Rooma, Kanpur, Uttar Pradesh, and is known for its modern infrastructure supporting practical skills and a relevant curriculum. It features smart classrooms with projectors, fully equipped laboratories, computer labs, hostels, mess and canteen facilities, playground, gymnasium, swimming pool, library, cafeteria, sports facilities, medical services, transport, auditorium, and civic amenities like water supply, electrification with backup generators. The institute is NAAC-accredited, ranks among top institutions in Uttar Pradesh for academia-industry alliances, dynamic campus life, and management practices. It emphasizes holistic student development, innovation, and a supportive environment for academic and extracurricular activities.",
     },
-    {
-        "source": "achievements",
+    {    "source": "achievements",
         "content": "Allenhouse Institute of Technology is celebrating 15 years of excellence and is recognized as one of the best private engineering colleges in eastern Uttar Pradesh. It is ISO 9001:2008 certified and part of the renowned Superhouse Group. Recent student achievements include winning first prize at HACKSHODH 2026 National Hackathon organized by CSJM University (with ₹1,00,000 award), securing top positions in Agri Hackathon, and individual accolades like winning the DRDO Slogan Competition. The institute has received positive industry feedback for student creativity, technical skills, and event organization. It ranks as the 4th best private engineering institute in UP and 1st top emerging BBA institute in India.",
     },
     {
