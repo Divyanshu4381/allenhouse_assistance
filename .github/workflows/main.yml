@@ -3,46 +3,52 @@ name: Allenhouse AI CI/CD
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
 
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    
-    - name: Set up Python 3.11
-      uses: actions/setup-python@v4
-      with:
-        python-version: "3.11"
-        
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install black pytest httpx pytest-asyncio
-        pip install -r requirements.txt
-        
-    - name: Lint with Black
-      run: black --check .
-      
-    - name: Run Tests with Pytest
-      env:
-        API_KEY: ${{ secrets.API_KEY }}
-        VOICE_API_KEY: ${{ secrets.VOICE_API_KEY }}
-      run: pytest
+      - uses: actions/checkout@v3
 
-  deploy-to-aws:
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install black pytest httpx pytest-asyncio
+
+      - name: Lint with Black
+        run: black --check .
+
+      - name: Run Tests with Pytest
+        env:
+          API_KEY: ${{ secrets.API_KEY }}
+          VOICE_API_KEY: ${{ secrets.VOICE_API_KEY }}
+        run: pytest
+
+  deploy:
     needs: build-and-test
     runs-on: ubuntu-latest
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     steps:
-    - name: Deploy to AWS EC2 via SSH
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.AWS_HOST }}
-        username: ${{ secrets.AWS_USERNAME }}
-        key: ${{ secrets.AWS_SSH_KEY }}
-        script: |
-          cd ~/allenhouse_assistance
-          bash scripts/deploy.sh
+      - name: Deploy to EC2
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            set -e
+            cd ~/allenhouse_assistance
+
+            echo "Pulling latest code..."
+            git pull origin main
+
+            echo "Installing dependencies..."
+            pip install -r requirements.txt
+
+            echo "Restarting app..."
+            pm2 restart allenhouse || pm2 start app.py --name allenhouse
