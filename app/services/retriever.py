@@ -2,6 +2,7 @@ from app.data.college_data import COLLEGE_DATA
 from app.services.normalizer import normalize
 from app.services.textifier import dict_to_text
 
+
 def retrieve_context(question: str) -> str:
     normalized_question = normalize(question)
     q_words = set(normalized_question.split())

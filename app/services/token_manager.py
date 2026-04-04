@@ -3,7 +3,9 @@ def get_max_tokens(question: str) -> int:
     q_len = len(question)
 
     # Long descriptive intents
-    if any(word in q for word in ["about", "overview", "describe", "institute", "college"]):
+    if any(
+        word in q for word in ["about", "overview", "describe", "institute", "college"]
+    ):
         return 400
 
     if q_len <= 40:

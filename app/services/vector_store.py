@@ -12,6 +12,7 @@ dimension = embeddings.shape[1]
 index = faiss.IndexFlatL2(dimension)
 index.add(np.array(embeddings))
 
+
 def search_vectors(query: str, k=3):
     query_vec = model.encode([query])
     distances, indices = index.search(np.array(query_vec), k)

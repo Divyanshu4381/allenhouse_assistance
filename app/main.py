@@ -9,9 +9,9 @@ app = FastAPI(title="College AI Assistant")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],   # dev ke liye ok
+    allow_origins=["*"],  # dev ke liye ok
     allow_credentials=True,
-    allow_methods=["*"],   # OPTIONS, POST, etc
+    allow_methods=["*"],  # OPTIONS, POST, etc
     allow_headers=["*"],
 )
 
@@ -21,11 +21,15 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 VIEW_DIR = os.path.join(BASE_DIR, "view")
 
 # Serve public directory
-app.mount("/public", StaticFiles(directory=os.path.join(VIEW_DIR, "public")), name="public")
+app.mount(
+    "/public", StaticFiles(directory=os.path.join(VIEW_DIR, "public")), name="public"
+)
+
 
 @app.get("/")
 def serve_home():
     return FileResponse(os.path.join(VIEW_DIR, "index.html"))
+
 
 @app.get("/speech-agent.js")
 def serve_speech_agent():
