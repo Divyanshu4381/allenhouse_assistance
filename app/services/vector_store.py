@@ -1,7 +1,7 @@
 import faiss
 import numpy as np
 from sentence_transformers import SentenceTransformer
-from app.data.college_data import COLLEGE_DATA
+from app.data.college_data2 import COLLEGE_DATA
 
 model = SentenceTransformer("all-MiniLM-L6-v2")
 

@@ -1,4 +1,4 @@
-from app.data.college_data import COLLEGE_DATA
+from app.data.college_data2 import COLLEGE_DATA
 from app.services.normalizer import normalize
 from app.services.textifier import dict_to_text
 
