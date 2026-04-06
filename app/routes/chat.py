@@ -49,8 +49,8 @@ def ask_college_ai(request: ChatRequest):
             "answer": """Please contact the college office for this information.
 
 For further assistance, you may call:
-📞 8127405222
-📞 8127505222"""}
+/n📞 8127405222
+/n📞 8127505222"""}
 
     answer = ask_llm(context, request.question)
     return {"answer": answer}
