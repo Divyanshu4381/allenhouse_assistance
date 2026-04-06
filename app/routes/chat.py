@@ -45,7 +45,12 @@ def ask_college_ai(request: ChatRequest):
     context = retrieve_context(request.question)
 
     if not context:
-        return {"answer": "Please contact the college office for this information."}
+        return {
+            "answer": """Please contact the college office for this information.
+
+For further assistance, you may call:
+📞 8127405222
+📞 8127505222"""}
 
     answer = ask_llm(context, request.question)
     return {"answer": answer}
